@@ -86,7 +86,7 @@ const forgotPassword = async () => {
         justifyContent: "center",
         alignItems: "center",
         height: "100vh",
-        background: "#F7FAFC",
+        background: "#EEF2F7"
       }}
     >
       <form
@@ -180,17 +180,28 @@ const forgotPassword = async () => {
           value={email}
           onChange={(e) => setEmail(e.target.value)}
           style={{
-            width: "100%",
-            padding: "14px",
-            marginBottom: "16px",
-            borderRadius: "12px",
-            border: "1px solid #D1D5DB",
-            background: "#F9FAFB",
-            color: "#355E3B",
-            fontSize: "15px",
-            boxSizing: "border-box",
-            outline: "none",
-          }}
+  width: "100%",
+  padding: "14px",
+  marginBottom: "16px",
+  borderRadius: "12px",
+  border: "1px solid #D1D5DB",
+  background: "#FFFFFF",
+  color: "#111827",
+  caretColor: "#355E3B",  
+  fontSize: "16px",
+  boxSizing: "border-box",
+  outline: "none",
+}}
+ onFocus={(e) => {
+    e.target.style.border = "1px solid #355E3B";
+    e.target.style.boxShadow = "0 0 0 3px rgba(53, 94, 59, 0.15)";
+  }}
+
+  onBlur={(e) => {
+    e.target.style.border = "1px solid #D1D5DB";
+    e.target.style.boxShadow = "none";
+  }}
+
           required
         />
 
@@ -210,16 +221,27 @@ const forgotPassword = async () => {
   setSuccess("");
 }}
     style={{
-      width: "100%",
-      padding: "14px 70px 14px 14px",
-      borderRadius: "12px",
-      border: "1px solid #D1D5DB",
-      background: "#F9FAFB",
-      color: "#355E3B",
-      fontSize: "15px",
-      boxSizing: "border-box",
-      outline: "none",
-    }}
+  width: "100%",
+  padding: "14px 70px 14px 14px",
+  borderRadius: "12px",
+  border: "1px solid #D1D5DB",
+  background: "#FFFFFF",
+  color: "#111827",
+  caretColor: "#355E3B", 
+  fontSize: "16px",
+  boxSizing: "border-box",
+  outline: "none",
+}}
+onFocus={(e) => {
+    e.target.style.border = "1px solid #355E3B";
+    e.target.style.boxShadow = "0 0 0 3px rgba(53, 94, 59, 0.15)";
+  }}
+
+  onBlur={(e) => {
+    e.target.style.border = "1px solid #D1D5DB";
+    e.target.style.boxShadow = "none";
+  }}
+
     required
   />
 
