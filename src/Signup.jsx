@@ -27,10 +27,14 @@ export default function Signup({ onBack }) {
 );
 
 await updateProfile(userCredential.user, {
-  displayName: name,
+  displayName: name.trim(),
 });
 
+await userCredential.user.reload();
+
 setSuccess("✅ Account created successfully!");
+
+window.location.reload();
     } catch (error) {
       setError(error.message);
     }

@@ -10,14 +10,18 @@ export default function AuthWrapper() {
   const [showDashboard, setShowDashboard] = useState(false);
 
   useEffect(() => {
-    const unsubscribe = onAuthStateChanged(auth, (currentUser) => {
-      setUser(currentUser);
-
-      // Reset welcome screen when user logs out
-      if (!currentUser) {
-        setShowDashboard(false);
+    const unsubscribe = onAuthStateChanged(
+      auth,
+      async (currentUser) => {
+        if (currentUser) {
+          await currentUser.reload();
+          setUser(auth.currentUser);
+        } else {
+          setUser(null);
+          setShowDashboard(false);
+        }
       }
-    });
+    );
 
     return () => unsubscribe();
   }, []);
@@ -57,5 +61,5 @@ export default function AuthWrapper() {
   }
 
   // Main App
-return <MindScroll />;
+  return <MindScroll />;
 }
