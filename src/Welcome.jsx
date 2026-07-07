@@ -1,93 +1,218 @@
-export default function Welcome({ user, onContinue }) {
-   const userName =
-  user?.displayName ||
-  user?.email?.split("@")[0] ||
-  "Friend";
+import { ShieldCheck, Brain, Leaf } from "lucide-react";
+
+export default function Welcome({ onGetStarted }) {
   return (
     <div
       style={{
         minHeight: "100vh",
-        background: "#F8FAF7",
+        background: "#F7FAFC",
         display: "flex",
         justifyContent: "center",
         alignItems: "center",
-        padding: "40px",
+        padding: "24px",
       }}
     >
       <div
         style={{
-          maxWidth: "600px",
+          width: "100%",
+          maxWidth: "700px",
           textAlign: "center",
         }}
       >
+        {/* Logo */}
         <img
           src="/mindscroll-logo.png"
           alt="MindScroll"
           style={{
-            width: "90px",
-            marginBottom: "30px",
+            width: "100px",
+            marginBottom: "28px",
           }}
         />
-<h1
-  style={{
-    fontSize: "38px",
-    color: "#355E3B",
-    lineHeight: "1.3",
-    marginBottom: "8px",
-    fontWeight: "700",
-  }}
->
-  Welcome, {userName} 👋
-</h1>
 
-<h2
-  style={{
-    fontSize: "28px",
-    color: "#355E3B",
-    fontWeight: "500",
-    marginTop: "0",
-    marginBottom: "25px",
-  }}
->
-  to MindScroll
-</h2>
-        <p
+        {/* App Name */}
+        <h1
           style={{
-            fontSize: "24px",
-            color: "#444",
-            marginBottom: "20px",
+            fontSize: "44px",
+            color: "#355E3B",
+            fontWeight: "700",
+            margin: 0,
+            marginBottom: "16px",
           }}
         >
-          Understand your digital habits.
+          MindScroll
+        </h1>
+
+        {/* Headline */}
+        <p
+          style={{
+            fontSize: "28px",
+            fontWeight: "600",
+            color: "#111827",
+            marginBottom: "18px",
+          }}
+        >
+          Reflect. Understand. Improve.
         </p>
 
+        {/* Description */}
         <p
           style={{
             fontSize: "18px",
-            color: "#666",
-            lineHeight: "1.7",
-            marginBottom: "50px",
+            color: "#4A5C52",
+            lineHeight: "1.8",
+            maxWidth: "560px",
+            margin: "0 auto 40px auto",
           }}
         >
-          A private space to reflect on why you use apps,
-          how they affect your attention,
-          and how to build healthier habits.
+          Build healthier digital habits through private reflection,
+          mindful awareness, and research-backed insights that help you
+          make intentional choices every day.
         </p>
 
+        {/* Button */}
         <button
-          onClick={onContinue}
+          onClick={onGetStarted}
           style={{
-            padding: "14px 40px",
-            borderRadius: "12px",
-            border: "none",
             background: "#355E3B",
-            color: "white",
-            fontSize: "18px",
+            color: "#FFFFFF",
+            border: "none",
+            borderRadius: "12px",
+            padding: "16px 36px",
+            fontSize: "17px",
+            fontWeight: "600",
             cursor: "pointer",
+            marginBottom: "60px",
+            minWidth: "220px",
           }}
         >
-          Continue →
+          Get Started
         </button>
+
+        {/* Feature Cards */}
+        <div
+          style={{
+            display: "grid",
+            gridTemplateColumns: "repeat(auto-fit, minmax(200px, 1fr))",
+            gap: "20px",
+          }}
+        >
+          {/* Card 1 */}
+          <div
+            style={{
+              background: "#FFFFFF",
+              borderRadius: "18px",
+              padding: "28px",
+              boxShadow: "0 12px 30px rgba(53,94,59,0.08)",
+              border: "1px solid #E5E7EB",
+            }}
+          >
+            <ShieldCheck
+              size={40}
+              color="#355E3B"
+              strokeWidth={2}
+              style={{ marginBottom: "18px" }}
+            />
+
+            <h3
+              style={{
+                color: "#111827",
+                fontSize: "20px",
+                marginBottom: "12px",
+              }}
+            >
+              Private by Design
+            </h3>
+
+            <p
+              style={{
+                color: "#6B7280",
+                lineHeight: "1.7",
+                fontSize: "15px",
+                margin: 0,
+              }}
+            >
+              Your reflections stay yours.
+            </p>
+          </div>
+
+          {/* Card 2 */}
+          <div
+            style={{
+              background: "#FFFFFF",
+              borderRadius: "18px",
+              padding: "28px",
+              boxShadow: "0 12px 30px rgba(53,94,59,0.08)",
+              border: "1px solid #E5E7EB",
+            }}
+          >
+            <Brain
+              size={40}
+              color="#355E3B"
+              strokeWidth={2}
+              style={{ marginBottom: "18px" }}
+            />
+
+            <h3
+              style={{
+                color: "#111827",
+                fontSize: "20px",
+                marginBottom: "12px",
+              }}
+            >
+              Research-backed
+            </h3>
+
+            <p
+              style={{
+                color: "#6B7280",
+                lineHeight: "1.7",
+                fontSize: "15px",
+                margin: 0,
+              }}
+            >
+              Built on evidence-based digital wellbeing.
+            </p>
+          </div>
+
+          {/* Card 3 */}
+          <div
+            style={{
+              background: "#FFFFFF",
+              borderRadius: "18px",
+              padding: "28px",
+              boxShadow: "0 12px 30px rgba(53,94,59,0.08)",
+              border: "1px solid #E5E7EB",
+            }}
+          >
+            <Leaf
+              size={40}
+              color="#355E3B"
+              strokeWidth={2}
+              style={{ marginBottom: "18px" }}
+            />
+
+            <h3
+              style={{
+                color: "#111827",
+                fontSize: "20px",
+                marginBottom: "12px",
+              }}
+            >
+              Build Better Habits
+            </h3>
+
+            <p
+              style={{
+                color: "#6B7280",
+                lineHeight: "1.7",
+                fontSize: "15px",
+                margin: 0,
+              }}
+            >
+              Small changes that last.
+            </p>
+          </div>
+        </div>
       </div>
     </div>
   );

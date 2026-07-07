@@ -2,25 +2,20 @@ import { useEffect, useState } from "react";
 import { onAuthStateChanged } from "firebase/auth";
 import { auth } from "./firebase";
 import Login from "./Login";
-import Welcome from "./Welcome";
 import MindScroll from "./MindScroll";
+import WelcomeBack from "./WelcomeBack";
 
 export default function AuthWrapper() {
   const [user, setUser] = useState(undefined);
-
-  // Read from localStorage
-  const [showHome, setShowHome] = useState(
-    localStorage.getItem("mindscroll_seen_welcome") === "true"
-  );
+  const [showDashboard, setShowDashboard] = useState(false);
 
   useEffect(() => {
     const unsubscribe = onAuthStateChanged(auth, (currentUser) => {
       setUser(currentUser);
 
-      // User logged out
+      // Reset welcome screen when user logs out
       if (!currentUser) {
-        localStorage.removeItem("mindscroll_seen_welcome");
-        setShowHome(false);
+        setShowDashboard(false);
       }
     });
 
@@ -29,27 +24,38 @@ export default function AuthWrapper() {
 
   if (user === undefined) {
     return (
-      <h2 style={{ textAlign: "center", marginTop: "100px" }}>
+      <div
+        style={{
+          minHeight: "100vh",
+          background: "#F7FAFC",
+          display: "flex",
+          justifyContent: "center",
+          alignItems: "center",
+          color: "#355E3B",
+          fontSize: "22px",
+          fontWeight: "600",
+        }}
+      >
         Loading...
-      </h2>
+      </div>
     );
   }
 
+  // User not logged in
   if (!user) {
     return <Login />;
   }
 
-  if (!showHome) {
+  // Show Welcome Back screen once after login
+  if (!showDashboard) {
     return (
-      <Welcome
+      <WelcomeBack
         user={user}
-        onContinue={() => {
-          localStorage.setItem("mindscroll_seen_welcome", "true");
-          setShowHome(true);
-        }}
+        onFinish={() => setShowDashboard(true)}
       />
     );
   }
 
-  return <MindScroll />;
+  // Main App
+return <MindScroll />;
 }
