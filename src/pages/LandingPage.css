@@ -1,0 +1,39 @@
+/* ===========================
+   LANDING PAGE
+=========================== */
+
+.landing-page{
+
+  position:relative;
+
+  overflow:hidden;
+
+  background:transparent;
+
+}
+
+/* Every section shares the same width */
+
+.section-container {
+  position: relative;
+  z-index: 1;
+
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 32px;
+}
+
+/* Hero & Story stay above the background */
+
+.hero,
+.emotion,
+.journey,
+.story{
+
+  position:relative;
+
+  z-index:1;
+
+  background:transparent;
+
+}

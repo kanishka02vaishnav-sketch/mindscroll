@@ -1,0 +1,725 @@
+/* ======================================================
+   FROM REFLECTION TO UNDERSTANDING
+   MindScroll Editorial Design System
+====================================================== */
+.works{
+
+    position:relative;
+
+    padding:140px 24px;
+
+    overflow:hidden;
+
+    background:transparent;
+}
+
+.works-container{
+
+    position:relative;
+
+    z-index:1;
+
+    max-width:1080px;
+
+    margin:0 auto;
+}
+
+/* ======================================================
+   Header
+====================================================== */
+
+.works-header{
+    text-align:center;
+    margin-bottom:110px;
+}
+
+.works-eyebrow{
+    display:inline-block;
+
+    font-size:14px;
+    font-weight:600;
+    letter-spacing:.12em;
+    text-transform:uppercase;
+
+    color:#355E3B;
+
+    margin-bottom:18px;
+}
+
+.works-header h2{
+    font-size:clamp(2.8rem,5vw,4rem);
+    line-height:1.08;
+    font-weight:700;
+
+    color:#1F2937;
+
+    margin-bottom:28px;
+}
+
+.works-header p{
+    max-width:660px;
+    margin:0 auto;
+
+    font-size:19px;
+    line-height:1.9;
+
+    color:#667085;
+}
+
+/* ======================================================
+   Story Layout
+====================================================== */
+.story-flow{
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    gap:170px;
+
+    position:relative;
+}
+.story-flow::before{
+    display:none;
+}
+/* ======================================================
+   Story Card
+====================================================== */
+
+.story-card{
+    position:relative;
+
+    width:min(920px,100%);
+
+    padding:42px 48px;
+
+   background: rgba(255,255,255,.82);
+   backdrop-filter: blur(18px);
+   -webkit-backdrop-filter: blur(18px);
+
+   border: 1px solid rgba(255,255,255,.65);
+
+    border-radius:32px;
+
+   box-shadow:
+    0 26px 70px rgba(31,41,55,.06),
+    0 8px 20px rgba(31,41,55,.03);
+
+   transition:
+    transform .55s cubic-bezier(.22,1,.36,1),
+    box-shadow .55s cubic-bezier(.22,1,.36,1),
+    border-color .35s ease,
+    background .35s ease;
+}
+
+/* Left Card */
+
+.story-card:nth-child(1){
+    max-width:720px;
+    margin-right:auto;
+    transform:translateX(-20px);
+}
+
+.story-card:nth-child(1):hover{
+
+    transform:translateX(-24px) translateY(-8px);
+
+    border-color:rgba(53,94,59,.12);
+
+    box-shadow:
+    0 34px 82px rgba(31,41,55,.08),
+    0 14px 34px rgba(31,41,55,.05);
+}
+
+/* Center Right Card */
+
+.story-card:nth-child(3){
+
+    max-width:620px;
+
+    padding:52px;
+
+    margin-left:auto;
+
+    transform:translateX(80px);
+
+}
+.story-card:nth-child(3):hover{
+
+    transform:translateX(104px) translateY(-8px);
+
+    border-color:rgba(53,94,59,.12);
+
+   box-shadow:
+    0 34px 82px rgba(31,41,55,.08),
+    0 14px 34px rgba(31,41,55,.05);
+}
+
+/* Bottom Left Card */
+
+.story-card:nth-child(5){
+
+    max-width:690px;
+
+    padding:60px;
+
+    margin-right:auto;
+
+    transform:translateX(-20px);
+
+}
+
+.story-card:nth-child(5):hover{
+transform:translateX(-24px) translateY(-8px);
+
+    border-color:rgba(53,94,59,.12);
+
+    box-shadow:
+    0 34px 82px rgba(31,41,55,.08),
+    0 14px 34px rgba(31,41,55,.05);
+}
+
+/* ======================================================
+   Typography
+====================================================== */
+
+.story-label{
+
+    display:inline-block;
+
+    margin-bottom:18px;
+
+    font-size:13px;
+
+    font-weight:750;
+
+    letter-spacing:.18em;
+
+    text-transform:uppercase;
+
+    color:#2A5132;
+
+    opacity:1;
+
+}
+.story-intro{
+
+display:block;
+
+margin-bottom:8px;
+
+font-size:16px;
+
+font-weight:500;
+
+line-height:1.7;
+
+letter-spacing:-0.01em;
+
+color:#5D6F66;
+
+max-width:560px;
+
+}
+.story-intro + .story-description{
+
+margin-top:10px;
+
+}
+
+.story-card h3{
+
+margin:0 0 14px;
+
+font-size:clamp(2rem,4vw,3rem);
+
+line-height:1.05;
+
+font-weight:700;
+
+letter-spacing:-0.045em;
+
+color:#1F2937;
+
+max-width:560px;
+
+}
+
+.story-description,
+.story-text,
+blockquote{
+
+margin:0;
+
+font-size:18px;
+
+line-height:1.9;
+
+font-weight:400;
+
+letter-spacing:-0.01em;
+
+max-width:720px;
+
+color:#667085;
+
+}
+
+blockquote{
+    margin:0;
+    font-style:normal;
+}
+.story-bridge{
+    position: relative;
+
+    z-index: 2;
+
+    background: transparent;
+
+    text-align:center;
+
+    margin:-70px 0 -10px;
+
+    font-size:24px;
+
+    font-weight:600;
+
+    letter-spacing:-0.02em;
+
+    color:#355E3B;
+
+    line-height:1.4;
+
+    opacity:.9;
+
+}
+/* ======================================================
+   Choice Chips
+====================================================== */
+
+.choice-grid{
+
+    display:flex;
+    flex-wrap:wrap;
+
+    gap:14px;
+
+    margin-top:28px;
+}
+.choice-chip{
+
+    display:inline-flex;
+
+    align-items:center;
+    justify-content:center;
+
+    gap:10px;
+
+    padding:16px 22px;
+
+    border-radius:999px;
+
+    background:#F8FAF9;
+
+    border:1px solid #E4EBE6;
+
+    font-size:16px;
+
+    font-weight:550;
+
+    color:#5D6F66;
+
+    cursor:pointer;
+
+    transition:
+        transform .25s ease,
+        box-shadow .25s ease,
+        background .25s ease,
+        border-color .25s ease;
+}
+
+
+.choice-chip svg{
+
+    flex-shrink:0;
+
+    color:#355E3B;
+
+}
+
+
+.choice-chip:hover{
+
+    transform:translateY(-3px);
+
+    background:#FFFFFF;
+
+    border-color:rgba(53,94,59,.18);
+
+    box-shadow:
+        0 12px 28px rgba(53,94,59,.10);
+}
+
+
+.choice-chip.active{
+
+    background:#355E3B;
+
+    border-color:#355E3B;
+
+    color:#FFFFFF;
+
+    transform:translateY(-2px);
+
+    box-shadow:
+        0 12px 28px rgba(53,94,59,.20),
+        0 0 0 6px rgba(53,94,59,.06);
+}
+
+
+.choice-chip.active svg{
+
+    color:#FFFFFF;
+
+    filter:drop-shadow(0 2px 6px rgba(255,255,255,.18));
+
+}
+/* ======================================================
+   Pattern Grid
+====================================================== */
+
+.pattern-grid{
+
+    display:grid;
+
+    grid-template-columns:repeat(2,1fr);
+
+    gap:18px;
+
+    margin-top:24px;
+}
+
+.pattern-grid div{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:12px;
+
+    padding:20px 22px;
+
+    background:rgba(248,250,248,.95);
+
+    border:1px solid rgba(53,94,59,.08);
+
+    border-radius:20px;
+
+    color:#355E3B;
+
+    font-size:15px;
+
+    font-weight:600;
+transition:
+    transform .45s cubic-bezier(.22,1,.36,1),
+    box-shadow .45s cubic-bezier(.22,1,.36,1),
+    border-color .3s ease,
+    background .3s ease;
+
+  
+    box-shadow:
+        
+    0 10px 24px rgba(31,41,55,.035);
+}
+
+.pattern-grid div:hover{
+
+   transform:translateY(-4px);
+
+background:#FFFFFF;
+
+border-color:rgba(53,94,59,.14);
+
+box-shadow:
+    0 18px 42px rgba(31,41,55,.06);
+}
+/* ======================================================
+   Dashboard
+====================================================== */
+
+.dashboard-mini{
+
+    display:grid;
+
+    grid-template-columns:repeat(3,1fr);
+
+    gap:20px;
+
+    margin-top:28px;
+}
+
+.mini-card{
+
+    padding:26px 22px;
+
+    background:rgba(248,250,248,.96);
+
+    border:1px solid rgba(53,94,59,.08);
+
+    border-radius:24px;
+
+    
+  box-shadow:
+    0 12px 28px rgba(31,41,55,.035);
+
+transition:
+    transform .5s cubic-bezier(.22,1,.36,1),
+    box-shadow .5s cubic-bezier(.22,1,.36,1),
+    border-color .35s ease,
+    background .35s ease;
+}
+
+.mini-card:hover{
+
+   transform:translateY(-5px);
+
+background:#FFFFFF;
+
+border-color:rgba(53,94,59,.18);
+
+box-shadow:
+    0 22px 48px rgba(31,41,55,.07);
+}
+.mini-card:hover span{
+    color:#355E3B;
+}
+.mini-card:hover p{
+    color:#355E3B;
+}
+
+.mini-card:hover strong{
+
+    color:#355E3B;
+
+    transform:translateY(-1px);
+
+}
+
+.mini-card:hover p{
+
+    color:#355E3B;
+
+}
+
+.mini-card:hover p{
+    color:#355E3B;
+}
+.mini-card span{
+
+    display:block;
+
+    margin-bottom:12px;
+
+    font-size:13px;
+
+    font-weight:600;
+
+    letter-spacing:.02em;
+
+    color:#98A2B3;
+}
+
+.mini-card strong{
+
+    display:block;
+
+    margin-top:2px;
+
+    font-size:34px;
+
+    line-height:1;
+
+    font-weight:700;
+
+    letter-spacing:-0.03em;
+
+    color:#1F2937;
+    transition:
+    color .3s ease,
+    transform .3s ease;
+}
+
+.mini-card p{
+
+    margin-top:10px;
+
+    font-size:14px;
+
+    line-height:1.6;
+
+    color:#475467;
+
+    transition: color .3s ease;
+
+}
+.mini-card-note{
+
+    margin-top:22px;
+
+    font-size:15px;
+
+    font-weight:650;
+
+    line-height:1.7;
+
+    color:#2F5D39;
+
+    letter-spacing:-0.01em;
+}
+.dashboard-note{
+
+    margin-top:56px;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    gap:12px;
+
+    font-size:18px;
+
+    font-weight:650;
+
+    color:#2F5D39;
+
+    letter-spacing:-0.01em;
+
+    line-height:1.5;
+}
+/* ======================================================
+   Responsive
+====================================================== */
+
+@media (max-width:768px){
+
+    .works{
+        padding:100px 20px;
+    }
+
+    .works-header{
+        margin-bottom:72px;
+    }
+
+   .story-flow{
+
+display:flex;
+flex-direction:column;
+align-items:center;
+gap:190px;
+}
+
+ .story-card{
+
+    width:100%;
+    max-width:100%;
+
+    padding:32px 24px;
+
+    margin:0;
+
+    border-radius:24px;
+
+    transform:none !important;
+}
+
+    .story-card:hover{
+
+        transform:translateY(-6px) !important;
+    }
+
+ .story-card h3{
+
+    font-size:26px;
+
+    line-height:1.15;
+
+}
+
+    .pattern-grid{
+        grid-template-columns:1fr;
+    }
+
+    .dashboard-mini{
+        grid-template-columns:1fr;
+    }
+
+   .choice-grid{
+
+    gap:12px;
+
+    margin-top:36px;
+
+}
+.choice-chip{
+
+    width:100%;
+
+    justify-content:flex-start;
+
+}
+}
+/* ======================================================
+   Reduced Motion
+====================================================== */
+
+@media (prefers-reduced-motion: reduce) {
+
+    *,
+    *::before,
+    *::after {
+
+        animation: none !important;
+
+        transition: none !important;
+
+        scroll-behavior: auto !important;
+
+    }
+
+    .story-card,
+    .choice-chip,
+    .pattern-grid div,
+    .mini-card {
+
+        transform: none !important;
+
+    }
+
+}
+/* ======================================================
+   Large Desktop
+====================================================== */
+
+@media (min-width: 1440px) {
+
+    .works-container{
+        max-width: 1100px;
+    }
+
+    .story-flow{
+        gap: 210px;
+    }
+
+    .story-card{
+        padding: 84px;
+    }
+
+    .story-card h3{
+        font-size: 3.4rem;
+    }
+
+    .works-header{
+        margin-bottom: 140px;
+    }
+
+}

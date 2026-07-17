@@ -1,0 +1,130 @@
+/* ===========================
+   NAVBAR
+=========================== */
+
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000;
+  transition: all 250ms ease-out;
+  background: transparent;
+}
+
+.navbar.scrolled {
+  background: #ffffff;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+}
+
+.navbar-container {
+  max-width: 1200px;
+  margin: 0 auto;
+
+  padding: 16px 32px;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* ===========================
+   LOGO
+=========================== */
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+
+  text-decoration: none;
+
+  color: #355E3B;
+
+  font-size: 24px;
+
+  font-weight: 700;
+}
+
+.navbar-logo {
+  width: 42px;
+  height: 42px;
+  object-fit: contain;
+}
+
+/* ===========================
+   NAV LINKS
+=========================== */
+
+.nav-links {
+  display: flex;
+  gap: 32px;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: #5D6F66;
+  font-size: 16px;
+  font-weight: 500;
+  transition: color .25s ease;
+}
+
+.nav-links a:hover {
+  color: #355e3b;
+}
+
+/* ===========================
+   BUTTONS
+=========================== */
+
+.nav-actions {
+  display: flex;
+  gap: 16px;
+}
+
+.sign-in-btn {
+  background: transparent;
+  border: none;
+  color: #355e3b;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: color 250ms ease-out;
+}
+
+.sign-in-btn:hover {
+  color: #2a4b2f;
+}
+
+.get-started-btn {
+  background: #355e3b;
+  color: white;
+  border: none;
+  padding: 12px 24px;
+  border-radius: 12px;
+  cursor: pointer;
+  font-size: 16px;
+  font-weight: 600;
+  box-shadow: 0 8px 24px rgba(53,94,59,0.18);
+
+  transition: all .3s ease;
+}
+
+.get-started-btn:hover {
+  background: #2a4b2f;
+  transform: translateY(-2px);
+  box-shadow: 0 12px 30px rgba(53,94,59,0.22);
+}
+/* ===========================
+   RESPONSIVE
+=========================== */
+
+@media (max-width: 900px) {
+  .nav-links {
+    display: none;
+  }
+
+  .navbar-container {
+    padding: 0 24px;
+  }
+}

@@ -1,0 +1,489 @@
+/* ==========================================
+   REFLECTION JOURNEY
+========================================== */
+
+.journey{
+  position: relative;
+  margin-top: -10px;
+    padding:20px 0 100px;
+  background: transparent;
+}
+
+.journey-showcase{
+  position: relative;
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.journey-showcase::before{
+  content:"";
+  position:absolute;
+  width:720px;
+  height:420px;
+  border-radius:50%;
+  background:radial-gradient(
+      ellipse,
+      rgba(111,175,143,.14) 0%,
+      rgba(111,175,143,.06) 45%,
+      transparent 80%
+  );
+  filter: blur(80px);
+  pointer-events:none;
+}
+
+/* ==========================================
+   PRODUCT CARD
+========================================== */
+
+.ms-device{
+
+  position:relative;
+  z-index:2;
+
+  width:520px;
+  min-height:610px;
+
+  padding:32px;
+
+  display:flex;
+  flex-direction:column;
+  justify-content:flex-start;
+
+  border-radius:30px;
+
+  background:rgba(255,255,255,.72);
+
+  backdrop-filter:blur(30px);
+  -webkit-backdrop-filter:blur(30px);
+
+  border:1px solid rgba(255,255,255,.9);
+
+  box-shadow:
+      0 30px 80px rgba(15,23,42,.08),
+      0 10px 30px rgba(53,94,59,.05);
+
+  overflow:hidden;
+
+  transition:
+      transform .45s cubic-bezier(.22,1,.36,1),
+      box-shadow .45s cubic-bezier(.22,1,.36,1);
+
+}
+
+.ms-device::before{
+
+  content:"";
+
+  position:absolute;
+
+  inset:0;
+
+  background:linear-gradient(
+      180deg,
+      rgba(255,255,255,.16),
+      rgba(255,255,255,0)
+  );
+
+  pointer-events:none;
+
+  z-index:0;
+
+}
+.ms-device > *{
+
+  position:relative;
+
+  z-index:1;
+
+}
+.ms-device:hover{
+
+  transform:translateY(-4px);
+
+  box-shadow:
+      0 40px 100px rgba(15,23,42,.12),
+      0 16px 40px rgba(53,94,59,.08);
+
+}
+
+/* ==========================================
+   HEADER
+========================================== */
+
+.device-header{
+
+  display:flex;
+  justify-content:space-between;
+  align-items:flex-start;
+
+  padding-bottom:20px;
+
+  border-bottom:1px solid rgba(53,94,59,.08);
+
+}
+
+.device-brand{
+
+  margin:0;
+
+  font-size:22px;
+
+  font-weight:700;
+
+  letter-spacing:-0.02em;
+
+ color:#24452B;
+
+}
+
+.device-subtitle{
+
+  display:block;
+
+  margin-top:6px;
+
+  font-size:15px;
+
+  font-weight:600;
+
+  color:#486055;
+
+}
+
+.device-progress{
+
+  width:52px;
+  height:52px;
+
+  display:flex;
+  align-items:center;
+  justify-content:center;
+
+  border-radius:16px;
+
+  background:#F5F8F6;
+
+  color:#355E3B;
+
+  font-weight:700;
+
+  font-size:15px;
+
+}
+
+/* ==========================================
+   BODY
+========================================== */
+
+.device-body{
+
+    margin:24px 0;
+
+    display:flex;
+
+    flex-direction:column;
+
+    gap:18px;
+
+}
+.device-body-grow{
+    flex:1;
+
+    display:flex;
+
+    flex-direction:column;
+
+    justify-content:center;
+}
+
+.device-body h2{
+    margin:0 0 14px;
+
+    font-size:28px;
+
+    line-height:1.3;
+
+    letter-spacing:-0.03em;
+
+  color:#1F2937;
+
+}
+
+.device-options{
+
+  display:flex;
+  flex-direction:column;
+  gap:10px;
+
+}
+
+.device-option{
+
+  width:100%;
+
+  padding:16px 18px;
+
+  border:none;
+
+  border-radius:18px;
+
+  background:#F8FBF9;
+
+  color:#355E3B;
+
+  text-align:left;
+
+  font-size:16px;
+
+  font-weight:500;
+
+  cursor:pointer;
+
+  transition:
+      transform .35s cubic-bezier(.22,1,.36,1),
+      background .35s cubic-bezier(.22,1,.36,1),
+      box-shadow .35s cubic-bezier(.22,1,.36,1);
+
+}
+
+.device-option:hover{
+
+  transform:translateY(-2px);
+
+  background:#F3F8F5;
+
+}
+
+.device-option.active{
+
+  background:#355E3B;
+
+  color:#fff;
+
+  box-shadow:
+      0 12px 28px rgba(53,94,59,.18);
+
+}
+
+.device-insight,
+.device-habit{
+
+  padding:18px 20px;
+
+  border-radius:20px;
+
+  background:linear-gradient(
+      180deg,
+      #F8FCF9,
+      #F2F8F4
+  );
+
+  border:1px solid rgba(111,175,143,.16);
+
+  color:#355E3B;
+
+  font-size:15px;
+line-height:1.65;
+
+  font-weight:500;
+
+  box-shadow:
+      0 10px 24px rgba(53,94,59,.05);
+
+}
+
+/* ==========================================
+   BUTTON
+========================================== */
+
+.device-button{
+
+  width:100%;
+
+  margin-top:24px;
+
+  padding:18px;
+
+  border:none;
+
+  border-radius:18px;
+
+  background:#355E3B;
+
+  color:#fff;
+
+  font-size:16px;
+
+  font-weight:600;
+
+  cursor:pointer;
+
+  transition:
+      transform .35s cubic-bezier(.22,1,.36,1),
+      background .35s cubic-bezier(.22,1,.36,1),
+      box-shadow .35s cubic-bezier(.22,1,.36,1);
+
+}
+
+.device-button:hover{
+
+  transform:translateY(-2px);
+
+  background:#2F5436;
+
+  box-shadow:
+      0 14px 30px rgba(53,94,59,.18);
+
+}
+
+/* ==========================================
+   PROGRESS
+========================================== */
+
+.journey-progress{
+
+  max-width:640px;
+
+  margin:28px auto 0;
+
+  display:flex;
+
+  justify-content:space-between;
+
+  position:relative;
+
+}
+
+.progress-line{
+
+  position:absolute;
+
+  left:8%;
+  right:8%;
+
+  top:16px;
+
+  height:2px;
+
+  background:#E5ECE8;
+
+}
+
+.progress-step{
+
+  position:relative;
+
+  z-index:2;
+
+  display:flex;
+
+  flex-direction:column;
+
+  align-items:center;
+
+  gap:10px;
+
+}
+
+.progress-dot{
+
+  width:18px;
+  height:18px;
+
+  border-radius:50%;
+
+  background:#fff;
+
+  border:2px solid #CBD8CF;
+
+  transition:.35s ease;
+
+}
+
+.progress-step.active .progress-dot{
+
+  background:#355E3B;
+
+  border-color:#355E3B;
+
+  transform:scale(1.15);
+
+}
+
+.progress-step span{
+
+  font-size:14px;
+
+  font-weight:600;
+
+  color:#6B7280;
+
+}
+
+.progress-step.active span{
+
+  color:#355E3B;
+
+}
+/* ==========================================
+   PATTERN CARD
+========================================== */
+
+.device-pattern{
+
+    margin-top:18px;
+
+    padding:20px;
+
+    border-radius:18px;
+
+    background:#F8FBF9;
+
+    border:1px solid rgba(111,175,143,.12);
+
+}
+
+.pattern-title{
+
+    margin:0 0 14px;
+
+    font-size:14px;
+
+    font-weight:700;
+
+    color:#355E3B;
+
+}
+
+.pattern-item{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:12px;
+
+    padding:8px 0;
+
+    color:#4B6354;
+
+    font-size:15px;
+
+}
+
+.pattern-dot{
+
+    width:8px;
+
+    height:8px;
+
+    border-radius:50%;
+
+    background:#6FAF8F;
+
+    flex-shrink:0;
+
+}

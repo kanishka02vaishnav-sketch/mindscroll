@@ -1,0 +1,226 @@
+.hero {
+  position: relative;
+  overflow: hidden;
+padding: 90px 0 90px;
+
+ background: transparent;
+}
+
+.hero-container {
+  position: relative;
+  z-index: 1;
+
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 32px;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  gap: 80px;
+}
+
+.hero-left {
+  flex: 1;
+  max-width: 560px;
+}
+
+.hero-right {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.hero-logo {
+  width: 64px;
+  margin-bottom: 24px;
+}
+
+.hero-title {
+  font-size: clamp(2.8rem, 5vw, 4.2rem);
+  line-height: 1.1;
+  font-weight: 700;
+  color: #1F2937;
+  margin-bottom: 18px;
+}
+
+.hero-subtitle {
+  font-size: 1.3rem;
+  color: #355E3B;
+  font-weight: 600;
+  margin-bottom: 24px;
+}
+
+.hero-description {
+  max-width: 520px;
+  font-size: 1.08rem;
+  line-height: 1.8;
+  color: #5D6F66;
+  margin-bottom: 32px;
+}
+
+.hero-points {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+  margin-bottom: 36px;
+}
+
+.hero-points span {
+
+  display: inline-flex;
+
+  align-items: center;
+
+  gap: 10px;
+
+  padding: 12px 18px;
+
+  background: rgba(255,255,255,.72);
+
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+
+  border: 1px solid rgba(255,255,255,.85);
+
+  border-radius: 999px;
+
+  box-shadow: 0 8px 22px rgba(53,94,59,.06);
+
+  font-size: 14px;
+
+  font-weight: 500;
+
+  color: #355E3B;
+
+  transition: all .3s ease;
+}
+.hero-points span svg{
+
+  flex-shrink: 0;
+
+  stroke-width: 2.2;
+}
+
+.hero-buttons {
+  display: flex;
+  gap: 18px;
+  flex-wrap: wrap;
+}
+
+.primary-btn {
+  background: #355E3B;
+  color: white;
+
+  border: none;
+  border-radius: 14px;
+
+  padding: 16px 28px;
+
+  font-size: 16px;
+  font-weight: 600;
+
+  cursor: pointer;
+  transition: all .3s ease;
+}
+
+.primary-btn:hover {
+  background: #2d5133;
+  transform: translateY(-2px);
+}
+
+.secondary-btn {
+  background: transparent;
+
+  border: 1px solid #D1D5DB;
+  border-radius: 14px;
+
+  padding: 16px 28px;
+
+  color: #355E3B;
+
+  font-size: 16px;
+  font-weight: 600;
+
+  cursor: pointer;
+  transition: all .3s ease;
+}
+
+.secondary-btn:hover {
+  background: white;
+  transform: translateY(-2px);
+}
+
+@media (max-width: 992px) {
+
+  .hero-container {
+  position: relative;
+  z-index: 1;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  gap: 80px;
+}
+
+  .hero-title {
+    font-size: 2.5rem;
+  }
+
+  .hero-description {
+    font-size: 1rem;
+  }
+
+}
+/* ==========================
+   HERO → STORY BRIDGE
+========================== */
+
+.hero-bridge{
+
+  margin-top:56px;
+
+  display:flex;
+
+  flex-direction:column;
+
+  align-items:flex-start;
+
+  gap:18px;
+
+}
+
+.bridge-line{
+
+  width:64px;
+
+  height:2px;
+
+  border-radius:999px;
+
+  background:linear-gradient(
+    to right,
+    #355E3B,
+    transparent
+  );
+
+}
+
+.hero-bridge p{
+
+  margin:0;
+
+  font-size:16px;
+
+  line-height:1.7;
+
+  color:#5D6F66;
+
+  font-weight:500;
+
+  letter-spacing:-0.01em;
+
+}

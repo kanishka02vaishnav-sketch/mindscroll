@@ -1,6 +1,6 @@
 import { useState } from "react";
 import Splash from "./Splash";
-import Welcome from "./Welcome";
+import LandingPage from "./pages/LandingPage";
 import AuthWrapper from "./AuthWrapper";
 
 export default function App() {
@@ -11,8 +11,7 @@ export default function App() {
   }
 
   if (screen === "welcome") {
-    return <Welcome onGetStarted={() => setScreen("auth")} />;
-  }
-
+  return <LandingPage onGetStarted={() => setScreen("auth")} />;
+}
   return <AuthWrapper />;
 }

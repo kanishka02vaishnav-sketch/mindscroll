@@ -1,0 +1,174 @@
+/* =====================================
+   GLOBAL BACKGROUND
+===================================== */
+
+.background-canvas{
+
+  position:fixed;
+
+  inset:0;
+
+  overflow:hidden;
+
+  pointer-events:none;
+
+  z-index:-1;
+
+  background:#FCFDFC;
+
+}
+
+/* =====================================
+   SOFT GRADIENT
+===================================== */
+
+.bg-gradient{
+
+  position:absolute;
+
+  inset:0;
+
+  background:
+  radial-gradient(
+      circle at 50% 15%,
+      rgba(111,175,143,.12),
+      transparent 45%
+  );
+
+}
+
+/* =====================================
+   FLOATING ORBS
+===================================== */
+
+.bg-orb{
+
+  position:absolute;
+
+  border-radius:50%;
+
+  filter:blur(120px);
+
+  opacity:.28;
+
+}
+
+.orb-1{
+
+  width:620px;
+
+  height:620px;
+
+  top:-180px;
+
+  left:-120px;
+
+  background:#DDEEDF;
+
+  animation:floatOne 18s ease-in-out infinite;
+
+}
+
+.orb-2{
+
+  width:520px;
+
+  height:520px;
+
+  right:-120px;
+
+  top:420px;
+
+  background:#EAF5EC;
+
+  animation:floatTwo 22s ease-in-out infinite;
+
+}
+
+.orb-3{
+
+  width:420px;
+
+  height:420px;
+
+  left:50%;
+
+  bottom:-180px;
+
+  transform:translateX(-50%);
+
+  background:#F1F7F3;
+
+  animation:floatThree 26s ease-in-out infinite;
+
+}
+
+/* =====================================
+   MOTION
+===================================== */
+
+@keyframes floatOne{
+
+  0%{
+
+    transform:translate(0,0);
+
+  }
+
+  50%{
+
+    transform:translate(40px,30px);
+
+  }
+
+  100%{
+
+    transform:translate(0,0);
+
+  }
+
+}
+
+@keyframes floatTwo{
+
+  0%{
+
+    transform:translate(0,0);
+
+  }
+
+  50%{
+
+    transform:translate(-40px,-30px);
+
+  }
+
+  100%{
+
+    transform:translate(0,0);
+
+  }
+
+}
+
+@keyframes floatThree{
+
+  0%{
+
+    transform:translateX(-50%) translateY(0);
+
+  }
+
+  50%{
+
+    transform:translateX(-50%) translateY(-30px);
+
+  }
+
+  100%{
+
+    transform:translateX(-50%) translateY(0);
+
+  }
+
+}
